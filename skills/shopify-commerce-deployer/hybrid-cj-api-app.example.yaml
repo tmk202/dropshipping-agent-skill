@@ -1,0 +1,48 @@
+integration:
+  mode: HYBRID_CJ_API_APP
+
+auth:
+  shopify:
+    required:
+      - SHOPIFY_SHOP_DOMAIN
+      - SHOPIFY_CLIENT_ID
+      - SHOPIFY_CLIENT_SECRET
+
+  cj:
+    required:
+      - CJ_API_KEY
+    runtime_token_generated_by_agent: true
+    use_returned_expiry_metadata: true
+
+cj_shop:
+  authorization_required: true
+  verify_via_api: true
+
+connection:
+  auto_create_when_mapping_unambiguous: true
+  human_if_ambiguous: true
+  never_replace_conflicting_connection_silently: true
+
+ownership:
+  storefront: SHOPIFY_AI
+  supplier_intelligence: CJ_API
+  product_connection: CJ_API
+  inventory: CJ_SHOPIFY_APP
+  orders: CJ_SHOPIFY_APP
+  fulfillment: CJ
+  tracking: CJ_SHOPIFY_APP
+
+safety:
+  auto_publish: false
+  auto_pay_supplier: false
+  prohibit_duplicate_inventory_writer: true
+  prohibit_duplicate_order_writer: true
+  prohibit_duplicate_tracking_writer: true
+
+prelaunch:
+  require_shopify_auth: true
+  require_cj_api_auth: true
+  require_cj_shop_authorized: true
+  require_connection_verified: true
+  require_test_order: true
+  require_human_publish_approval: true

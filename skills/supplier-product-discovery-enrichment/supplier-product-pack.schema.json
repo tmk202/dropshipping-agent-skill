@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Supplier Product Pack",
+  "type": "object",
+  "required": [
+    "identity",
+    "variants",
+    "stock_snapshot",
+    "freight",
+    "economics"
+  ],
+  "properties": {
+    "identity": {
+      "type": "object",
+      "required": [
+        "supplier",
+        "pid"
+      ],
+      "properties": {
+        "supplier": {
+          "type": "string"
+        },
+        "pid": {
+          "type": "string"
+        },
+        "sku": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "facts": {
+      "type": "object"
+    },
+    "variants": {
+      "type": "array"
+    },
+    "warehouses": {
+      "type": "array"
+    },
+    "stock_snapshot": {
+      "type": "object"
+    },
+    "freight": {
+      "type": "object"
+    },
+    "economics": {
+      "type": "object"
+    },
+    "source_links": {
+      "type": "object"
+    },
+    "confidence": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

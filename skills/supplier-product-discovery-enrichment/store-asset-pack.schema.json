@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Store Asset Pack",
+  "type": "object",
+  "required": [
+    "product",
+    "assets",
+    "missing_assets"
+  ],
+  "properties": {
+    "product": {
+      "type": "object",
+      "required": [
+        "supplier",
+        "pid"
+      ],
+      "properties": {
+        "supplier": {
+          "type": "string"
+        },
+        "pid": {
+          "type": "string"
+        }
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "asset_id",
+          "media_type",
+          "role",
+          "source",
+          "status",
+          "product_truth"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string"
+          },
+          "media_type": {
+            "enum": [
+              "IMAGE",
+              "VIDEO"
+            ]
+          },
+          "role": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "local_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "KEEP",
+              "REWORK",
+              "DROP",
+              "REVIEW"
+            ]
+          },
+          "product_truth": {
+            "type": "boolean"
+          },
+          "cj_pid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "cj_vid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "missing_assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "required_action"
+        ],
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "required_action": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

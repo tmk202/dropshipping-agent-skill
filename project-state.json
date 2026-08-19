@@ -1,0 +1,106 @@
+{
+  "project_name": "eu-dropshipping-pipeline",
+  "updated_at": "2026-08-19T15:50:00Z",
+  "pipeline_version": "10-stage-master",
+  "current_stage": {
+    "id": "05",
+    "name": "Supplier Discovery & Enrichment",
+    "status": "COMPLETED_AND_ENRICHED_WITH_REAL_CJ_MEDIA",
+    "skill": "supplier-product-discovery-enrichment"
+  },
+  "history": [
+    {
+      "stage_id": "01",
+      "stage_name": "Pain Discovery",
+      "approved_at": "2026-08-19T13:49:55Z",
+      "selected_option": "A",
+      "decision_summary": "Nấm mốc bám sâu khe silicone, ron gạch & viền kính cửa sổ/cao su máy giặt"
+    },
+    {
+      "stage_id": "02",
+      "stage_name": "Product Selection",
+      "approved_at": "2026-08-19T13:51:23Z",
+      "selected_option": "A",
+      "decision_summary": "High-Viscosity Penetrating Anti-Mold Gel (Tuýp Gel Tẩy Mốc Bám Dính Chân Sâu)"
+    },
+    {
+      "stage_id": "03",
+      "stage_name": "Country Selection",
+      "approved_at": "2026-08-19T13:52:35Z",
+      "selected_option": "A",
+      "decision_summary": "Cộng hòa Séc (Czech Republic - CZ)"
+    },
+    {
+      "stage_id": "04",
+      "stage_name": "Competition Intelligence",
+      "approved_at": "2026-08-19T13:53:22Z",
+      "selected_option": "GO",
+      "decision_summary": "Launch Approved (Competition Score: 30/100, Healthy Blue Ocean)"
+    },
+    {
+      "stage_id": "05",
+      "stage_name": "Supplier Discovery & Enrichment",
+      "approved_at": "2026-08-19T15:50:00Z",
+      "selected_option": "CJ_PID_2407290745461616800",
+      "decision_summary": "Queried CJ API, discovered PID 2407290745461616800 (SKU: CJJT209632401AZ, $0.80), downloaded 4 raw supplier media files directly from CJ CDN into assets/"
+    },
+    {
+      "stage_id": "06",
+      "stage_name": "Store & Offer Blueprint",
+      "approved_at": "2026-08-19T13:54:00Z",
+      "selected_option": "A",
+      "decision_summary": "Standard Quantity Break Ladder (1x 399 Kč, 2x 599 Kč Best Seller Freeship, 3x 799 Kč + Free Gift)"
+    },
+    {
+      "stage_id": "07",
+      "stage_name": "AI Store Builder",
+      "approved_at": "2026-08-19T14:15:12Z",
+      "selected_option": "A",
+      "decision_summary": "Approved Live Preview & Shopify Theme Codebase (/Users/alice/Documents/nnt/CODE/puroseal-cz-store)"
+    },
+    {
+      "stage_id": "08",
+      "stage_name": "Shopify Commerce Deployer",
+      "approved_at": "2026-08-19T15:17:25Z",
+      "selected_option": "HYBRID_CJ_API_APP",
+      "decision_summary": "Verified Shopify Product ID 9235352879235 (Active), Theme ID 162591309955, HD Product Photos, and CJ App Connection"
+    }
+  ],
+  "approved_commitments": {
+    "pain": "Deep Mold & Mildew embedded in Bathroom Silicone Sealant, Tile Grout, Window Seams, and Washer Rubber Gaskets",
+    "product": "High-Viscosity Penetrating Anti-Mold Gel (120g/150g Tube with Precision Nozzle)",
+    "target_country": "Czech Republic (CZ)",
+    "go_no_go": "GO",
+    "supplier_discovery_enrichment": {
+      "cj_api_verified": true,
+      "selected_pid": "2407290745461616800",
+      "sku": "CJJT209632401AZ",
+      "unit_cost_usd": 0.80,
+      "raw_cj_media": [
+        "/Users/alice/Documents/nnt/CODE/puroseal-cz-store/assets/cj-raw-tube.jpg",
+        "/Users/alice/Documents/nnt/CODE/puroseal-cz-store/assets/cj-raw-gallery-1.jpg",
+        "/Users/alice/Documents/nnt/CODE/puroseal-cz-store/assets/cj-raw-gallery-2.jpg",
+        "/Users/alice/Documents/nnt/CODE/puroseal-cz-store/assets/cj-raw-gallery-3.jpg"
+      ],
+      "asset_pack": "/Users/alice/Documents/nnt/CODE/puroseal-cz-store/store-asset-pack.json"
+    },
+    "store_offer": "PuroSeal CZ - 1x 399 Kč (€16.50) + 79 Kč ship | 2x 599 Kč (€24.90) Free Ship (Best Seller) | 3x 799 Kč (€32.90) Free Ship + Grout Pen",
+    "store_build": {
+      "store_name": "PuroSeal CZ",
+      "directory": "/Users/alice/Documents/nnt/CODE/puroseal-cz-store",
+      "qa_passed": true,
+      "preview_approved": true
+    },
+    "shopify_commerce": {
+      "status": "CONNECTED_AND_VERIFIED",
+      "shop_domain": "hermes-store-pt.myshopify.com",
+      "product_id": "9235352879235",
+      "theme_id": "162591309955",
+      "preview_url": "https://hermes-store-pt.myshopify.com/?preview_theme_id=162591309955",
+      "cj_connection": "VERIFIED_ACTIVE",
+      "mode": "HYBRID_CJ_API_APP"
+    },
+    "growth_budget": "$25-$30/day (3 days test = ~$75-$90)",
+    "scale_plan": "Vertical Scale CZ ($30 -> $100 -> $300/day) -> Replicate to Slovakia (SK) via Packeta -> Expand to Poland (PL)"
+  }
+}

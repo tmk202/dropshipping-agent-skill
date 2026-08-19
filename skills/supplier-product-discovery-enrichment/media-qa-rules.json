@@ -1,0 +1,40 @@
+{
+  "image_rules": {
+    "minimum_status_fields": [
+      "resolution",
+      "product_match",
+      "variant_match",
+      "watermark",
+      "foreign_text",
+      "supplier_branding",
+      "duplicate",
+      "role_candidate"
+    ],
+    "statuses": [
+      "KEEP",
+      "REWORK",
+      "DROP",
+      "REVIEW"
+    ]
+  },
+  "video_rules": {
+    "required_fields": [
+      "source_url",
+      "cover_url",
+      "duration",
+      "rights_status",
+      "status"
+    ],
+    "rights_statuses": [
+      "APPROVED_FOR_USE",
+      "RIGHTS_REVIEW_REQUIRED",
+      "DO_NOT_USE"
+    ]
+  },
+  "truth_policy": {
+    "product_truth_must_match_real_supplier_product": true,
+    "fake_before_after_forbidden": true,
+    "fake_certification_forbidden": true,
+    "fake_performance_proof_forbidden": true
+  }
+}

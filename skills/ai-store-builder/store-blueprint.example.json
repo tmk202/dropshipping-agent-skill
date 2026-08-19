@@ -1,0 +1,61 @@
+{
+  "pain": {
+    "approved": true,
+    "name": "Hard-water limescale on shower glass",
+    "voice_of_customer": [
+      "The white stains keep coming back.",
+      "I do not want to use harsh chemicals every week."
+    ]
+  },
+  "product": {
+    "approved": true,
+    "name": "Limescale Eraser",
+    "mechanism": "Micro-abrasive cleaning surface",
+    "landed_cost": 4.2,
+    "variants": ["1 Pack", "2 Pack", "3 Pack"]
+  },
+  "country": {
+    "approved": true,
+    "code": "CZ",
+    "locale": "cs-CZ",
+    "currency": "CZK"
+  },
+  "competition": {
+    "approved": true,
+    "verdict": "GO",
+    "angle_gap": "Chemical-free cleaning",
+    "offer_gap": "Weak bundles and slow-shipping messaging among competitors"
+  },
+  "store_blueprint": {
+    "approved": true,
+    "brand": {
+      "name": "Kalkio",
+      "positioning": "Practical chemical-free hard-water cleaning",
+      "tone": "Clean, trustworthy, practical"
+    },
+    "offer": {
+      "single": "399 Kč",
+      "bundle_2": "649 Kč",
+      "bundle_3": "799 Kč",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "landing_page": {
+      "sections": [
+        "hero",
+        "problem",
+        "agitation",
+        "mechanism",
+        "demo",
+        "benefits",
+        "before_after",
+        "use_cases",
+        "comparison",
+        "social_proof",
+        "offer_ladder",
+        "guarantee",
+        "faq",
+        "final_cta"
+      ]
+    }
+  }
+}

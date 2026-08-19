@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Supplier Discovery Candidate",
+  "type": "object",
+  "required": [
+    "supplier",
+    "identity",
+    "match",
+    "economics",
+    "operations",
+    "media"
+  ],
+  "properties": {
+    "supplier": {
+      "const": "CJ"
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "pid",
+        "raw_title"
+      ],
+      "properties": {
+        "pid": {
+          "type": "string"
+        },
+        "sku": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "raw_title": {
+          "type": "string"
+        }
+      }
+    },
+    "match": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "mechanism_match": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "economics": {
+      "type": "object"
+    },
+    "operations": {
+      "type": "object"
+    },
+    "media": {
+      "type": "object"
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

@@ -10,11 +10,11 @@ The system is coordinated by **[`skills/dropshipping-orchestrator`](./skills/dro
 
 > **Agent decides implementation. Human decides business commitments.**
 
-The agent autonomously handles queries, sources, deduplication, semantic clustering, scoring, and deep research, but **MUST pause for explicit human approval at key business decision gates**.
+The agent autonomously handles queries, sources, deduplication, semantic clustering, supplier intelligence, scoring, code implementation, and integration plumbing, but **MUST pause for explicit human approval at key business decision gates and credential authorizations**.
 
 ---
 
-## 🚦 STAGE MACHINE & GATED WORKFLOW
+## 🚦 STAGE MACHINE & GATED WORKFLOW (10 STAGES)
 
 | Stage | Specialist Skill | Decision Type | Next Stage |
 |---|---|---|---|
@@ -22,37 +22,43 @@ The agent autonomously handles queries, sources, deduplication, semantic cluster
 | **02. Product Selection** | `winning-product-research` | `HUMAN_REQUIRED` | 03 |
 | **03. Country Selection** | `market-validation` | `HUMAN_REQUIRED` | 04 |
 | **04. Competition Intelligence** | `competition-intelligence` | `AUTO` Research + `HUMAN_REQUIRED` Go/No-Go | 05 |
-| **05. Store & Offer** | `store-conversion-engine` | `HUMAN_REQUIRED` for positioning/offer commitment | 06 |
-| **06. Creative / Tracking / Paid Test** | `ecom-growth-engine` | `HUMAN_REQUIRED` for test budget and launch | 07 |
-| **07. Scale / Operations** | `scale-operations-engine` | `HUMAN_REQUIRED` for material scale, supplier, or expansion | Loop |
+| **05. Supplier Discovery & Enrichment** | `supplier-product-discovery-enrichment` | `AUTH_REQUIRED` CJ API + `HUMAN_REQUIRED` Select CJ PID | 06 |
+| **06. Store & Offer Blueprint** | `store-conversion-engine` | `HUMAN_REQUIRED` for positioning/offer blueprint | 07 |
+| **07. AI Store Builder** | `ai-store-builder` | `AUTO` Build/QA + `HUMAN_REQUIRED` Preview approval | 08 |
+| **08. Shopify Commerce Deployer** | `shopify-commerce-deployer` | `AUTO` Sync/Deploy + `AUTH_REQUIRED` + `HUMAN_REQUIRED` Publish | 09 |
+| **09. Creative / Tracking / Paid Test** | `ecom-growth-engine` | `HUMAN_REQUIRED` for test budget and launch | 10 |
+| **10. Scale / Operations** | `scale-operations-engine` | `HUMAN_REQUIRED` for material scale, supplier, or expansion | Loop |
 
+```text
+[01. SĂN NỖI ĐAU]                      --> skills/pain-point-research                [HUMAN_REQUIRED]
+        |
+        v
+[02. CHỌN SẢN PHẨM WIN]                --> skills/winning-product-research           [HUMAN_REQUIRED]
+        |
+        v
+[03. CHỌN QUỐC GIA MỤC TIÊU]           --> skills/market-validation                  [HUMAN_REQUIRED]
+        |
+        v
+[04. RÀ QUÉT ĐỐI THỦ & GO/NO-GO]       --> skills/competition-intelligence           [AUTO + HUMAN GO/NO-GO]
+        |
+        v
+[05. TÌM & LÀM GIÀU DỮ LIỆU CJ]        --> skills/supplier-product-discovery-enrichment [AUTH CJ + CHỌN PID + AUTO ENRICH]
+        |
+        v
+[06. STORE BLUEPRINT & OFFER]          --> skills/store-conversion-engine            [HUMAN_REQUIRED BLUEPRINT]
+        |
+        v
+[07. TỰ ĐỘNG BUILD CODE STORE]        --> skills/ai-store-builder                   [AUTO BUILD + HUMAN PREVIEW]
+        |
+        v
+[08. DEPLOY & KẾT NỐI SHOPIFY ↔ CJ]   --> skills/shopify-commerce-deployer          [AUTH + HUMAN PUBLISH GATE]
+        |
+        v
+[09. TẠO AD, TEST & ĐO PHỄU]           --> skills/ecom-growth-engine                 [HUMAN_REQUIRED BUDGET]
+        |
+        v
+[10. VẬN HÀNH, DEFEND & SCALE]         --> skills/scale-operations-engine            [HUMAN_REQUIRED SCALE]
 ```
-[BƯỚC 1: SĂN NỖI ĐAU]                 --> skills/pain-point-research       [HUMAN_REQUIRED]
-        |
-        v
-[BƯỚC 2: CHỌN SẢN PHẨM WIN]           --> skills/winning-product-research  [HUMAN_REQUIRED]
-        |
-        v
-[BƯỚC 3: CHỌN QUỐC GIA MỤC TIÊU]      --> skills/market-validation         [HUMAN_REQUIRED]
-        |
-        v
-[BƯỚC 4: RÀ QUÉT ĐỐI THỦ & GO/NO-GO]  --> skills/competition-intelligence  [AUTO + HUMAN GO/NO-GO]
-        |
-        v
-[BƯỚC 5: DỰNG STORE & OFFER]          --> skills/store-conversion-engine   [HUMAN_REQUIRED]
-        |
-        v
-[BƯỚC 6: TẠO AD, TEST & ĐO PHỄU]      --> skills/ecom-growth-engine        [HUMAN_REQUIRED BUDGET]
-        |
-        v
-[BƯỚC 7: VẬN HÀNH, DEFEND & SCALE]    --> skills/scale-operations-engine   [HUMAN_REQUIRED SCALE]
-```
-
----
-
-## 🧪 Real-World Case Study
-👉 **Xem báo cáo thực tế áp dụng trọn vẹn 7 bước cho sản phẩm Gôm Tẩy Cặn Vôi (CZ & DE):**  
-**[`examples/limescale-eraser-case-study.md`](./examples/limescale-eraser-case-study.md)** *(Điểm Cơ Hội 96/100, 0 Ads Competition tại Séc, Margin 80%)*.
 
 ---
 
@@ -65,9 +71,12 @@ The agent autonomously handles queries, sources, deduplication, semantic cluster
 | 📦 **Stage 02** | **`winning-product-research`** | [`skills/winning-product-research/`](./skills/winning-product-research/SKILL.md) | 20 tiêu chí lọc sản phẩm win, Scorecard 100 điểm, Unit margin $\ge 70\%$, logistics an toàn. |
 | 🌍 **Stage 03** | **`market-validation`** | [`skills/market-validation/`](./skills/market-validation/SKILL.md) | Ma trận $\text{Product} \times \text{Pain} \times \text{Country}$, *Geographic Arbitrage*, cổng thanh toán bản địa. |
 | 🔍 **Stage 04** | **`competition-intelligence`** | [`skills/competition-intelligence/`](./skills/competition-intelligence/SKILL.md) | 7 tầng quét đối thủ, Ad longevity, Price map, tìm **Angle Gap** & tạo báo cáo **"WHY NOW?" Go/No-Go**. |
-| 🏪 **Stage 05** | **`store-conversion-engine`** | [`skills/store-conversion-engine/`](./skills/store-conversion-engine/SKILL.md) | Hệ thống Store chuyển đổi cao (10 tiêu chuẩn DTC), Visual Sales Letter 13 tầng, Offer Ladder. |
-| 🚀 **Stage 06** | **`ecom-growth-engine`** | [`skills/ecom-growth-engine/`](./skills/ecom-growth-engine/SKILL.md) | Creative Matrix (25–50 concepts), Tracking QA, Paid Testing có kiểm soát, Chẩn đoán phễu (Case A–E). |
-| 🛡️ **Stage 07** | **`scale-operations-engine`** | [`skills/scale-operations-engine/`](./skills/scale-operations-engine/SKILL.md) | Private Agent 3PL, Creative Factory hàng tuần, Niche Brand Evolution, Vòng lặp học tập khép kín. |
+| 🧬 **Stage 05** | **`supplier-product-discovery-enrichment`** | [`skills/supplier-product-discovery-enrichment/`](./skills/supplier-product-discovery-enrichment/SKILL.md) | Tìm kiếm & so sánh sản phẩm trên CJ $\rightarrow$ Duyệt PID $\rightarrow$ Bóc tách VID, giá vốn, kho hàng, Media QA. |
+| 🏪 **Stage 06** | **`store-conversion-engine`** | [`skills/store-conversion-engine/`](./skills/store-conversion-engine/SKILL.md) | Hệ thống Store chuyển đổi cao (10 tiêu chuẩn DTC), Visual Sales Letter 13 tầng, Offer Ladder, Blueprint JSON. |
+| 🛠️ **Stage 07** | **`ai-store-builder`** | [`skills/ai-store-builder/`](./skills/ai-store-builder/SKILL.md) | Tự động sinh mã nguồn Store chuẩn DTC, component hierarchy, responsive UX, Technical QA & Preview. |
+| 🔌 **Stage 08** | **`shopify-commerce-deployer`** | [`skills/shopify-commerce-deployer/`](./skills/shopify-commerce-deployer/SKILL.md) | Kết nối Shopify & Supplier, map variants, tạo sản phẩm, deploy theme unpublished, sync tồn kho & tracking. |
+| 🚀 **Stage 09** | **`ecom-growth-engine`** | [`skills/ecom-growth-engine/`](./skills/ecom-growth-engine/SKILL.md) | Creative Matrix (25–50 concepts), Tracking QA, Paid Testing có kiểm soát, Chẩn đoán phễu (Case A–E). |
+| 🛡️ **Stage 10** | **`scale-operations-engine`** | [`skills/scale-operations-engine/`](./skills/scale-operations-engine/SKILL.md) | Private Agent 3PL, Creative Factory hàng tuần, Niche Brand Evolution, Vòng lặp học tập khép kín. |
 
 ---
 

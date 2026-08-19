@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hybrid CJ API + App Commerce Deployment State",
+  "type": "object",
+  "required": [
+    "mode",
+    "shopify",
+    "cj_api",
+    "cj_shop",
+    "ownership"
+  ],
+  "properties": {
+    "mode": {
+      "const": "HYBRID_CJ_API_APP"
+    },
+    "shopify": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "AUTH_REQUIRED",
+            "CONNECTED",
+            "BLOCKED"
+          ]
+        },
+        "shop_domain": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "runtime_token_valid": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "cj_api": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "AUTH_REQUIRED",
+            "CONNECTED",
+            "BLOCKED"
+          ]
+        },
+        "api_key_configured": {
+          "type": "boolean"
+        },
+        "runtime_token_valid": {
+          "type": "boolean"
+        },
+        "access_token_expires_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "cj_shop": {
+      "type": "object",
+      "required": [
+        "detected",
+        "authorized"
+      ],
+      "properties": {
+        "detected": {
+          "type": "boolean"
+        },
+        "authorized": {
+          "type": "boolean"
+        },
+        "cj_shop_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "platform": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "product_connection": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "UNMAPPED",
+            "CANDIDATE",
+            "VERIFIED",
+            "AMBIGUOUS",
+            "BLOCKED"
+          ]
+        }
+      }
+    },
+    "ownership": {
+      "type": "object",
+      "required": [
+        "inventory",
+        "orders",
+        "tracking"
+      ],
+      "properties": {
+        "inventory": {
+          "const": "CJ_SHOPIFY_APP"
+        },
+        "orders": {
+          "const": "CJ_SHOPIFY_APP"
+        },
+        "tracking": {
+          "const": "CJ_SHOPIFY_APP"
+        }
+      }
+    },
+    "test_order": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_VERIFIED"
+          ]
+        }
+      }
+    },
+    "publish_approved": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "product": {
+    "supplier": "CJ",
+    "pid": "CJ_PID_EXAMPLE"
+  },
+  "assets": [
+    {
+      "asset_id": "IMG_001",
+      "media_type": "IMAGE",
+      "role": "HERO_PRODUCT",
+      "source": "CJ",
+      "source_url": "https://example.invalid/cj-main.jpg",
+      "local_path": null,
+      "status": "KEEP",
+      "product_truth": true,
+      "cj_pid": "CJ_PID_EXAMPLE",
+      "cj_vid": null
+    },
+    {
+      "asset_id": "IMG_002",
+      "media_type": "IMAGE",
+      "role": "VARIANT",
+      "source": "CJ",
+      "source_url": "https://example.invalid/cj-black.jpg",
+      "local_path": null,
+      "status": "KEEP",
+      "product_truth": true,
+      "cj_pid": "CJ_PID_EXAMPLE",
+      "cj_vid": "CJ_VID_BLACK"
+    },
+    {
+      "asset_id": "VID_001",
+      "media_type": "VIDEO",
+      "role": "DEMO",
+      "source": "CJ",
+      "source_url": "https://example.invalid/demo.mp4",
+      "local_path": null,
+      "status": "REVIEW",
+      "product_truth": true,
+      "cj_pid": "CJ_PID_EXAMPLE",
+      "cj_vid": null
+    }
+  ],
+  "missing_assets": [
+    {
+      "role": "LIFESTYLE_SOURCE",
+      "required_action": "Create branded lifestyle composition using real product reference."
+    }
+  ]
+}

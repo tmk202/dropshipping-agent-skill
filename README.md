@@ -4,9 +4,99 @@
 
 ---
 
-## 🏗️ 6-Phase Closed-Loop Master Architecture
+## 🚦 HƯỚNG DẪN THỰC THI: CHẠY SKILL NÀO TRƯỚC, SKILL NÀO SAU? (EXECUTION SEQUENCE)
 
-$$\mathbf{DISCOVER \longrightarrow BUILD \longrightarrow VALIDATE \longrightarrow GROW \longrightarrow DEFEND \longrightarrow LEARN}$$
+Khi bắt đầu nghiên cứu một ngách hoặc có một ý tưởng kinh doanh mới, **luôn chạy tuần tự 6 Bước theo đúng thứ tự sau**:
+
+```
+[BƯỚC 1: SĂN NỖI ĐAU]           --> skills/pain-point-research
+        |
+        v
+[BƯỚC 2: CHỌN SẢN PHẨM WIN]     --> skills/winning-product-research
+        |
+        v
+[BƯỚC 3: CHỌN QUỐC GIA BÁN]     --> skills/market-validation
+        |
+        v
+[BƯỚC 4: DỰNG STORE & OFFER]    --> skills/store-conversion-engine
+        |
+        v
+[BƯỚC 5: TẠO AD, TEST & ĐO PHỄU]--> skills/ecom-growth-engine
+        |
+        v
+[BƯỚC 6: VẬN HÀNH & SCALE BRAND]--> skills/scale-operations-engine
+```
+
+---
+
+### 📋 CHI TIẾT TỪNG BƯỚC THỰC THI (INPUT $\rightarrow$ OUTPUT)
+
+### 🔹 Bước 1: Kích hoạt `skills/pain-point-research` (Bắt buộc chạy đầu tiên)
+* **Khi nào chạy:** Khi bắt đầu với một ngách thị trường bất kỳ (Thú cưng, Nhà cửa, Xe hơi, Làm đẹp...).
+* **Nhiệm vụ:**
+  1. Crawl ngôn ngữ than phiền tự nhiên trên Reddit/TikTok (*"I'm tired of"*, *"nothing works"*).
+  2. Phân cụm Semantic Pain Map (Đo lường *Severity* + *Money Signals*).
+  3. Bóc tách review 1–3★ trên Amazon để tìm ra **"Pain within Pain" (Lỗ hổng thế hệ 2)**.
+* **Output đầu ra:** Top 3–5 Nỗi đau có **Solution Gap cao nhất** (Đau thật + Giải pháp cũ dở + Sẵn sàng chi tiền).
+
+---
+
+### 🔹 Bước 2: Kích hoạt `skills/winning-product-research` (Chạy thứ 2)
+* **Khi nào chạy:** Sau khi đã chọn được Nỗi đau từ Bước 1.
+* **Nhiệm vụ:**
+  1. Ghép nối sản phẩm vật lý giải quyết triệt để nỗi đau đó (1688 / AliExpress / CJ).
+  2. Chấm điểm theo bộ 20 tiêu chí & Scorecard 100 điểm.
+  3. Lọc Unit Economics: $\text{Selling Price} \ge 2.5 - 4\times \text{Landed Cost}$ (Gross Margin $\ge 70\%$).
+  4. Lọc độ an toàn logistics (Nhỏ gọn, $<250\text{g}$, không dễ vỡ, tỷ lệ hoàn hàng $<1\%$).
+* **Output đầu ra:** 1 Sản phẩm đạt điểm $\ge 80/100$ điểm (Đủ chuẩn Winner Candidate).
+
+---
+
+### 🔹 Bước 3: Kích hoạt `skills/market-validation` (Chạy thứ 3)
+* **Khi nào chạy:** Sau khi đã có cặp **Product × Pain**.
+* **Nhiệm vụ:**
+  1. Thẩm định thị trường đa quốc gia (Séc 🇨🇿, Đức 🇩🇪, Hà Lan 🇳🇱, Pháp 🇫🇷, Bồ Đào Nha 🇵🇹, Mỹ 🇺🇸...).
+  2. Quét Meta Ads Library nội địa bằng tiếng bản xứ để tìm **Geographic Arbitrage** (Nhu cầu cao nhưng Ads cạnh tranh gần như bằng 0).
+  3. Kiểm tra cổng thanh toán bắt buộc của nước đó (iDEAL, Klarna, MB WAY, Dobírka/COD).
+* **Output đầu ra:** Ma trận **$\text{Product} \times \text{Pain} \times \text{Country}$** và chọn ra **1 Quốc gia có Opportunity Score cao nhất**.
+
+---
+
+### 🔹 Bước 4: Kích hoạt `skills/store-conversion-engine` (Chạy thứ 4)
+* **Khi nào chạy:** Sau khi đã chốt Quốc gia mục tiêu.
+* **Nhiệm vụ:**
+  1. Dựng Landing Page / Store theo cấu trúc **Visual Sales Letter 13 tầng chuẩn Bleame**.
+  2. Viết Copywriting hướng kết quả: $\text{Feature} \rightarrow \text{Mechanism} \rightarrow \text{Benefit} \rightarrow \text{Outcome}$.
+  3. Thiết lập **Offer Ladder** đẩy AOV ($1\times$ Entry, $2\times$ Most Popular, $3\times$ Best Value + Free Gift).
+  4. Duyệt qua **Bộ 8 câu hỏi Pre-Launch Gate** (Brand, Message, Clarity, Desire, Proof, Trust, Offer, Economics).
+* **Output đầu ra:** Trang Landing Page / Shopify Store hoàn chỉnh, sẵn sàng nhận traffic.
+
+---
+
+### 🔹 Bước 5: Kích hoạt `skills/ecom-growth-engine` (Chạy thứ 5)
+* **Khi nào chạy:** Khi Store đã sẵn sàng bật quảng cáo.
+* **Nhiệm vụ:**
+  1. Lấy Voice-of-Customer từ Bước 1 để tạo **Creative Matrix (5 Angles $\times$ 5 Hooks = 25–50 Concepts)**.
+  2. **Tracking QA:** Tự đặt 1 Test Order thật để verify 5 Events (`ViewContent`, `AddToCart`, `InitiateCheckout`, `AddPaymentInfo`, `Purchase`).
+  3. Bật Paid Test có kiểm soát (Batch đầu 6–10 ads).
+  4. Chẩn đoán phễu (Case A $\rightarrow$ E) và ra quyết định: **KILL** (Cắt lỗ) / **ITERATE** (Đổi Hook) / **SCALE** (Vít ngân sách & nhân bản 6 biến thể V2–V6).
+* **Output đầu ra:** Tìm thấy **Creative–Market Fit** và xác nhận **Winner thực tế sinh lời**.
+
+---
+
+### 🔹 Bước 6: Kích hoạt `skills/scale-operations-engine` (Chạy thứ 6 - Giai đoạn Winner)
+* **Khi nào chạy:** Khi sản phẩm đã chứng minh có lãi ổn định từ Bước 5.
+* **Nhiệm vụ:**
+  1. Ký hợp đồng Private Agent 3PL, cam kết SLA Processing $\le 24–48\text{h}$, kích hoạt Supplier dự phòng.
+  2. Vận hành **Creative Factory** sản xuất đều đặn 6–10 ads mới mỗi tuần (Chống Ad Fatigue).
+  3. Chuyển đổi One-Product Store thành **Niche Brand**: Ra mắt Product B/C giải quyết nỗi đau liền kề, tối ưu LTV qua Email/SMS Flows.
+  4. Mở rộng địa lý (Horizontal Geo-Expansion) sang các nước lân cận (DE $\rightarrow$ AT/CH; CZ $\rightarrow$ SK/PL).
+  5. **Closed-Loop Feedback:** Nạp toàn bộ dữ liệu CAC, CVR, Margin thực tế ngược lại cho Bước 1 để AI tự động thông minh hơn.
+* **Output đầu ra:** Một cỗ máy kinh doanh DTC sinh lời dài hạn, tự vận hành và đa dạng hóa rủi ro.
+
+---
+
+## 🏗️ 6-Phase Master Architecture Overview
 
 ```
                                     +-------------------------------------------------------+
@@ -62,39 +152,28 @@ $$\mathbf{DISCOVER \longrightarrow BUILD \longrightarrow VALIDATE \longrightarro
 
 ---
 
-## 📂 Included Skills Suite
+## 📂 Danh Sách 6 Skills Trong Kho
 
-| Skill | Folder | Purpose |
-| :--- | :--- | :--- |
-| **`pain-point-research`** | [`skills/pain-point-research/`](./skills/pain-point-research/SKILL.md) | Extracts, clusters, scores, and validates organic consumer pain points from Reddit, TikTok, Amazon 1-3 star reviews, and Meta Ads Library before matching products. |
-| **`winning-product-research`** | [`skills/winning-product-research/`](./skills/winning-product-research/SKILL.md) | 20-point checklist and scoring framework to validate, score (100 pts), and filter winning DTC products based on scroll-stop creative potential, economics, and fulfillment. |
-| **`market-validation`** | [`skills/market-validation/`](./skills/market-validation/SKILL.md) | 12-factor cross-border market validation engine to evaluate Product x Pain x Country matrix for geographic arbitrage and localized contribution margin. |
-| **`store-conversion-engine`** | [`skills/store-conversion-engine/`](./skills/store-conversion-engine/SKILL.md) | 10-part high-converting DTC store system, 13-stage visual narrative, engineered offer ladders, mobile-first UX, and 8-question pre-launch gate. |
-| **`ecom-growth-engine`** | [`skills/ecom-growth-engine/`](./skills/ecom-growth-engine/SKILL.md) | Step-by-step master execution playbook for Creative Matrix generation, Tracking QA, Paid Testing, Funnel Diagnostics (Case A-E), Kill/Iterate/Scale rules, and Closed-Loop Feedback learning. |
-| **`scale-operations-engine`** | [`skills/scale-operations-engine/`](./skills/scale-operations-engine/SKILL.md) | Post-win scaling, fulfillment SLA, contribution margin optimization, Creative Factory weekly production, niche brand evolution, and portfolio risk diversification. |
-
----
-
-## 🎯 Example 3-Dimensional Matrix Evaluation (Product × Pain × Country)
-
-| Product | Solved Pain Point | Target Country | Pain Score | Product Score | Country Score | FINAL SCORE | Action Decision |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Nano Limescale Eraser** | Hard water scale on shower glass | 🇨🇿 **CZ** | **96** | **97** | **93** | 🔥 **95 / 100** | 🚀 **LAUNCH TEST (0 Competitor Ads)** |
-| **Nano Limescale Eraser** | Kalkablagerungen Duschglas | 🇩🇪 **DE** | **93** | **97** | **90** | 🔥 **93 / 100** | 🚀 **SCALE NEXT (High Purchasing Power)** |
-| **Nano Limescale Eraser** | Kalkaanslag badkamer | 🇳🇱 **NL** | **90** | **97** | **89** | 🔥 **92 / 100** | 🚀 **SCALE (Require iDEAL gateway)** |
-| **Nano Limescale Eraser** | Hard water shower glass | 🇺🇸 **US** | **95** | **97** | **58** | 76 / 100 | ❌ **SKIP (Ad CPM too high, Saturated)** |
+| Thứ tự chạy | Skill | Đường dẫn | Mục đích cốt lõi |
+| :---: | :--- | :--- | :--- |
+| **1️⃣** | **`pain-point-research`** | [`skills/pain-point-research/`](./skills/pain-point-research/SKILL.md) | Săn tìm ngôn ngữ nỗi đau, phân cụm semantic, bóc tách review 1–3★ tìm *Solution Gap*. |
+| **2️⃣** | **`winning-product-research`** | [`skills/winning-product-research/`](./skills/winning-product-research/SKILL.md) | 20 tiêu chí lọc sản phẩm win, Scorecard 100 điểm, Unit margin $\ge 70\%$, logistics an toàn. |
+| **3️⃣** | **`market-validation`** | [`skills/market-validation/`](./skills/market-validation/SKILL.md) | Ma trận $\text{Product} \times \text{Pain} \times \text{Country}$, *Geographic Arbitrage*, cổng thanh toán bản địa. |
+| **4️⃣** | **`store-conversion-engine`** | [`skills/store-conversion-engine/`](./skills/store-conversion-engine/SKILL.md) | Hệ thống Store chuyển đổi cao (10 tiêu chuẩn DTC), Visual Sales Letter 13 tầng, Offer Ladder. |
+| **5️⃣** | **`ecom-growth-engine`** | [`skills/ecom-growth-engine/`](./skills/ecom-growth-engine/SKILL.md) | Creative Matrix (25–50 concepts), Tracking QA, Paid Testing có kiểm soát, Chẩn đoán phễu (Case A–E). |
+| **6️⃣** | **`scale-operations-engine`** | [`skills/scale-operations-engine/`](./skills/scale-operations-engine/SKILL.md) | Private Agent 3PL, Creative Factory hàng tuần, Niche Brand Evolution, Vòng lặp học tập khép kín. |
 
 ---
 
-## 🚀 How to Install in Your AI Agent
+## 🚀 Cách Cài Đặt Vào AI Agent
 
-### For Antigravity / Gemini Agents:
+### Dành cho Antigravity / Gemini IDE:
 ```bash
 mkdir -p .agents/skills
 cp -r skills/* .agents/skills/
 ```
 
-### For Hermes Agent:
+### Dành cho Hermes Agent CLI:
 ```bash
 mkdir -p ~/.hermes/skills
 cp -r skills/* ~/.hermes/skills/
@@ -103,4 +182,4 @@ cp -r skills/* ~/.hermes/skills/
 ---
 
 ## 📄 License
-MIT License. Created for high-velocity DTC & Dropshipping research automation.
+MIT License. Được thiết kế chuyên biệt cho hệ thống tự động hóa nghiên cứu và vận hành DTC / Dropshipping tốc độ cao.

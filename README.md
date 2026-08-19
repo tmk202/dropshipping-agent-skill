@@ -32,6 +32,12 @@ Khi bắt đầu nghiên cứu một ngách hoặc có một ý tưởng sản p
 
 ---
 
+## 🧪 Real-World Case Study
+👉 **Xem báo cáo thực tế áp dụng trọn vẹn 7 bước cho sản phẩm Gôm Tẩy Cặn Vôi (CZ & DE):**  
+**[`examples/limescale-eraser-case-study.md`](./examples/limescale-eraser-case-study.md)** *(Điểm Cơ Hội 96/100, 0 Ads Competition tại Séc, Margin 80%)*.
+
+---
+
 ## 🏗️ 12-Engine Closed-Loop Architecture
 
 $$\mathbf{01\ Pain \rightarrow 02\ Product \rightarrow 03\ Country \rightarrow 04\ Competition \rightarrow 05\ Go/No\text{-}Go \rightarrow 06\ Store \rightarrow 07\ Creative \rightarrow 08\ Tracking \rightarrow 09\ Paid\ Test \rightarrow 10\ Scale \rightarrow 11\ Operations \rightarrow 12\ Learn\ \circlearrowleft}$$

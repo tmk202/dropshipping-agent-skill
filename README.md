@@ -1,12 +1,12 @@
 # 🚀 Dropshipping & DTC Agent Skills Suite
 
-> A complete, production-grade **4-Engine AI Agent Framework** for organic pain discovery, winning product validation, multi-country market validation, and high-converting DTC store systems.
+> A complete, production-grade **10-Engine AI Agent Framework** for organic pain discovery, winning product validation, multi-country market validation, high-converting DTC store systems, creative intelligence, paid testing diagnostics, and feedback loops.
 
 ---
 
-## 🏗️ 4-Engine Architecture
+## 🏗️ 10-Engine Closed-Loop Architecture
 
-$$\underbrace{\textbf{Layer 1: Pain Engine}}_{\text{pain-point-research}} \quad \longrightarrow \quad \underbrace{\textbf{Layer 2: Product Engine}}_{\text{winning-product-research}} \quad \longrightarrow \quad \underbrace{\textbf{Layer 3: Geo Engine}}_{\text{market-validation}} \quad \longrightarrow \quad \underbrace{\textbf{Layer 4: Store Engine}}_{\text{store-conversion-engine}} \quad \longrightarrow \quad \mathbf{Paid\ Test\ \&\ Scale}$$
+$$\mathbf{Pain \rightarrow Product \rightarrow Country \rightarrow Store/Offer \rightarrow Creative \rightarrow Tracking \rightarrow Paid\ Test \rightarrow Analyze \rightarrow Iterate \rightarrow Scale \rightarrow Learn}$$
 
 ```
                                     +-------------------------------------------------------+
@@ -16,7 +16,7 @@ $$\underbrace{\textbf{Layer 1: Pain Engine}}_{\text{pain-point-research}} \quad 
                                                                 |
                                                                 v
 +-----------------------------------------------------------------------------------------------------------------------------------+
-| LAYER 1: PAIN ENGINE (skills/pain-point-research)                                                                                 |
+| 01. PAIN DISCOVERY ENGINE (skills/pain-point-research)                                                                            |
 | * Organic Natural Language Querying ("I'm tired of", "nothing works", "I've tried X,Y,Z")                                          |
 | * Semantic Clustering & Pain Mapping (Frequency x Severity x Purchase Intent)                                                     |
 | * 1-3 Star Negative Review Mining -> Finding "Pain within Pain" (Pain Level 2)                                                    |
@@ -25,7 +25,7 @@ $$\underbrace{\textbf{Layer 1: Pain Engine}}_{\text{pain-point-research}} \quad 
                                                                 |
                                                                 v
 +-----------------------------------------------------------------------------------------------------------------------------------+
-| LAYER 2: PRODUCT ENGINE (skills/winning-product-research)                                                                         |
+| 02. WINNING PRODUCT ENGINE (skills/winning-product-research)                                                                      |
 | * 20-Point Checklist & 100-Point Scorecard (Demand, Scroll Stop 1-3s, Wow Factor, Margin)                                         |
 | * Unit Economics Filter: Selling Price >= 2.5 - 4x Landed Cost (70%+ Gross Margin)                                                |
 | * Fulfillment & Logistics Safety (Non-fragile, lightweight, <1% refund risk)                                                      |
@@ -34,7 +34,7 @@ $$\underbrace{\textbf{Layer 1: Pain Engine}}_{\text{pain-point-research}} \quad 
                                                                 |
                                                                 v
 +-----------------------------------------------------------------------------------------------------------------------------------+
-| LAYER 3: GEO / COUNTRY ENGINE (skills/market-validation)                                                                          |
+| 03. GEO / COUNTRY ENGINE (skills/market-validation)                                                                               |
 | * Native Local Language Validation (Czech, German, Dutch, French, Portuguese)                                                     |
 | * Geographic Arbitrage (High Demand + Low / Zero Local Ad Competition)                                                            |
 | * Local Price Gap & Contribution Margin Equation (Net Contribution after VAT, CAC, Fees)                                          |
@@ -44,7 +44,7 @@ $$\underbrace{\textbf{Layer 1: Pain Engine}}_{\text{pain-point-research}} \quad 
                                                                 |
                                                                 v
 +-----------------------------------------------------------------------------------------------------------------------------------+
-| LAYER 4: STORE & CONVERSION ENGINE (skills/store-conversion-engine)                                                               |
+| 04. STORE & OFFER ENGINE (skills/store-conversion-engine)                                                                         |
 | * 10-Part DTC Brand Standards (Brand Feel, Above-the-Fold Instant Selling, No Dropship Clutter)                                    |
 | * 13-Stage Visual Sales Letter Narrative (Hero -> Problem -> Agitate -> Solution -> Demo -> Proof -> Comparison -> Offer -> FAQ) |
 | * Feature-to-Outcome Copywriting (Feature -> Mechanism -> Benefit -> Outcome)                                                    |
@@ -53,10 +53,15 @@ $$\underbrace{\textbf{Layer 1: Pain Engine}}_{\text{pain-point-research}} \quad 
 +---------------------------------------------------------------+-------------------------------------------------------------------+
                                                                 |
                                                                 v
-                                    +-------------------------------------------------------+
-                                    |              HIGH-PROFIT LAUNCH & SCALE               |
-                                    |            Continuous Creative Iteration              |
-                                    +-------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+| 05 - 10. GROWTH, TESTING, SCALING & FEEDBACK ENGINE (skills/ecom-growth-engine)                                                    |
+| * 05. Creative Intelligence: Voice of Customer -> 10 Angles x 5 Hooks = 50 Concepts Matrix                                       |
+| * 06. Tracking & Attribution QA: Test Order verification, Pixel/CAPI deduped, standard UTMs                                       |
+| * 07. Paid Testing Engine: Controlled budget batch testing (5 angles x 2 creatives = 10 ads batch)                                |
+| * 08. Funnel Diagnostics & Decision Engine: Case A to E root cause analysis (KILL / ITERATE / SCALE)                               |
+| * 09. Scaling & Retention Engine: Vertical scaling + Horizontal Geo-Expansion + Post-purchase LTV backend                          |
+| * 10. Closed-Loop Feedback Engine: Feeding actual CAC/CVR/Margin data back to Research Engines                                    |
++-----------------------------------------------------------------------------------------------------------------------------------+
 ```
 
 ---
@@ -69,6 +74,7 @@ $$\underbrace{\textbf{Layer 1: Pain Engine}}_{\text{pain-point-research}} \quad 
 | **`winning-product-research`** | [`skills/winning-product-research/`](./skills/winning-product-research/SKILL.md) | 20-point checklist and scoring framework to validate, score (100 pts), and filter winning DTC products based on scroll-stop creative potential, economics, and fulfillment. |
 | **`market-validation`** | [`skills/market-validation/`](./skills/market-validation/SKILL.md) | 12-factor cross-border market validation engine to evaluate Product x Pain x Country matrix for geographic arbitrage and localized contribution margin. |
 | **`store-conversion-engine`** | [`skills/store-conversion-engine/`](./skills/store-conversion-engine/SKILL.md) | 10-part high-converting DTC store system, 13-stage visual narrative, engineered offer ladders, mobile-first UX, and 8-question pre-launch gate. |
+| **`ecom-growth-engine`** | [`skills/ecom-growth-engine/`](./skills/ecom-growth-engine/SKILL.md) | Step-by-step master execution playbook for Creative Matrix generation, Tracking QA, Paid Testing, Funnel Diagnostics (Case A-E), Kill/Iterate/Scale rules, and Closed-Loop Feedback learning. |
 
 ---
 

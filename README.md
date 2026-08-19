@@ -1,33 +1,51 @@
 # 🚀 Dropshipping & DTC Agent Skills Suite
 
-> A complete, production-grade **12-Engine Autonomous DTC AI Framework** structured across the **6-Phase Closed-Loop Architecture (DISCOVER $\rightarrow$ BUILD $\rightarrow$ VALIDATE $\rightarrow$ GROW $\rightarrow$ DEFEND $\rightarrow$ LEARN)**.
+> A complete, production-grade **Autonomous DTC AI Framework** governed by the **Dropshipping Orchestrator (Gated State Machine)** across the **6-Phase Closed-Loop Architecture (DISCOVER $\rightarrow$ BUILD $\rightarrow$ VALIDATE $\rightarrow$ GROW $\rightarrow$ DEFEND $\rightarrow$ LEARN)**.
 
 ---
 
-## 🚦 BẢNG ĐIỀU PHỐI THỨ TỰ CHẠY SKILL (EXECUTION SEQUENCE)
+## 🧭 META-SKILL: DROPSHIPPING ORCHESTRATOR
 
-Khi bắt đầu nghiên cứu một ngách hoặc có một ý tưởng sản phẩm mới, **luôn chạy tuần tự 7 Bước theo đúng thứ tự sau**:
+The system is coordinated by **[`skills/dropshipping-orchestrator`](./skills/dropshipping-orchestrator/SKILL.md)** under the fundamental rule:
+
+> **Agent decides implementation. Human decides business commitments.**
+
+The agent autonomously handles queries, sources, deduplication, semantic clustering, scoring, and deep research, but **MUST pause for explicit human approval at key business decision gates**.
+
+---
+
+## 🚦 STAGE MACHINE & GATED WORKFLOW
+
+| Stage | Specialist Skill | Decision Type | Next Stage |
+|---|---|---|---|
+| **01. Pain Discovery** | `pain-point-research` | `HUMAN_REQUIRED` | 02 |
+| **02. Product Selection** | `winning-product-research` | `HUMAN_REQUIRED` | 03 |
+| **03. Country Selection** | `market-validation` | `HUMAN_REQUIRED` | 04 |
+| **04. Competition Intelligence** | `competition-intelligence` | `AUTO` Research + `HUMAN_REQUIRED` Go/No-Go | 05 |
+| **05. Store & Offer** | `store-conversion-engine` | `HUMAN_REQUIRED` for positioning/offer commitment | 06 |
+| **06. Creative / Tracking / Paid Test** | `ecom-growth-engine` | `HUMAN_REQUIRED` for test budget and launch | 07 |
+| **07. Scale / Operations** | `scale-operations-engine` | `HUMAN_REQUIRED` for material scale, supplier, or expansion | Loop |
 
 ```
-[BƯỚC 1: SĂN NỖI ĐAU]                 --> skills/pain-point-research
+[BƯỚC 1: SĂN NỖI ĐAU]                 --> skills/pain-point-research       [HUMAN_REQUIRED]
         |
         v
-[BƯỚC 2: CHỌN SẢN PHẨM WIN]           --> skills/winning-product-research
+[BƯỚC 2: CHỌN SẢN PHẨM WIN]           --> skills/winning-product-research  [HUMAN_REQUIRED]
         |
         v
-[BƯỚC 3: CHỌN QUỐC GIA MỤC TIÊU]      --> skills/market-validation
+[BƯỚC 3: CHỌN QUỐC GIA MỤC TIÊU]      --> skills/market-validation         [HUMAN_REQUIRED]
         |
         v
-[BƯỚC 4: RÀ QUÉT ĐỐI THỦ & GO/NO-GO]  --> skills/competition-intelligence
+[BƯỚC 4: RÀ QUÉT ĐỐI THỦ & GO/NO-GO]  --> skills/competition-intelligence  [AUTO + HUMAN GO/NO-GO]
         |
         v
-[BƯỚC 5: DỰNG STORE & OFFER]          --> skills/store-conversion-engine
+[BƯỚC 5: DỰNG STORE & OFFER]          --> skills/store-conversion-engine   [HUMAN_REQUIRED]
         |
         v
-[BƯỚC 6: TẠO AD, TEST & ĐO PHỄU]      --> skills/ecom-growth-engine
+[BƯỚC 6: TẠO AD, TEST & ĐO PHỄU]      --> skills/ecom-growth-engine        [HUMAN_REQUIRED BUDGET]
         |
         v
-[BƯỚC 7: VẬN HÀNH, DEFEND & SCALE]    --> skills/scale-operations-engine
+[BƯỚC 7: VẬN HÀNH, DEFEND & SCALE]    --> skills/scale-operations-engine   [HUMAN_REQUIRED SCALE]
 ```
 
 ---
@@ -38,68 +56,18 @@ Khi bắt đầu nghiên cứu một ngách hoặc có một ý tưởng sản p
 
 ---
 
-## 🏗️ 12-Engine Closed-Loop Architecture
+## 📂 Danh Sách Toàn Bộ Skills Trong Kho
 
-$$\mathbf{01\ Pain \rightarrow 02\ Product \rightarrow 03\ Country \rightarrow 04\ Competition \rightarrow 05\ Go/No\text{-}Go \rightarrow 06\ Store \rightarrow 07\ Creative \rightarrow 08\ Tracking \rightarrow 09\ Paid\ Test \rightarrow 10\ Scale \rightarrow 11\ Operations \rightarrow 12\ Learn\ \circlearrowleft}$$
-
-```
-                                    +-------------------------------------------------------+
-                                    |                GLOBAL CONSUMER DISCOVERY              |
-                                    |   Reddit • TikTok • Amazon 1-3* • Meta Ads Library    |
-                                    +---------------------------+---------------------------+
-                                                                |
-                                                                v
-+-----------------------------------------------------------------------------------------------------------------------------------+
-| PHASE 1: DISCOVER & INTELLIGENCE                                                                                                  |
-| * 01. Pain Discovery Engine (skills/pain-point-research): Natural language queries, semantic clustering, 1-3* mining, solution gap  |
-| * 02. Winning Product Engine (skills/winning-product-research): 20-point checklist, 100-pt scorecard, margin >= 2.5-4x landed cost |
-| * 03. Country Geo Engine (skills/market-validation): Multi-country validation, geographic arbitrage, local payment & tax check   |
-| * 04. Competition Intelligence (skills/competition-intelligence): 7-Layer scan (Direct, Ads, Marketplace, Price, Angle Gap)      |
-| * 05. Go / No-Go Decision Engine: Generating "WHY NOW?" strategic justification and final launch approval                        |
-+---------------------------------------------------------------+-------------------------------------------------------------------+
-                                                                |
-                                                                v
-+-----------------------------------------------------------------------------------------------------------------------------------+
-| PHASE 2: BUILD                                                                                                                    |
-| * 06. Store & Offer Engine (skills/store-conversion-engine): 10 DTC brand standards, 13-stage visual sales narrative, AOV ladder |
-| * 07. Creative Intelligence (skills/ecom-growth-engine): Voice of Customer -> 10 Angles x 5 Hooks = 50 Concepts Matrix           |
-+---------------------------------------------------------------+-------------------------------------------------------------------+
-                                                                |
-                                                                v
-+-----------------------------------------------------------------------------------------------------------------------------------+
-| PHASE 3: VALIDATE                                                                                                                 |
-| * 08. Tracking & Attribution QA (skills/ecom-growth-engine): Test order verification, Pixel/CAPI deduped, standard UTMs           |
-| * 09. Paid Testing Engine (skills/ecom-growth-engine): Controlled budget batch testing (6-10 ads batch)                            |
-| * 10. Decision Engine (skills/ecom-growth-engine): Funnel diagnostics (Case A-E) -> KILL / ITERATE / SCALE                         |
-+---------------------------------------------------------------+-------------------------------------------------------------------+
-                                                                |
-                                                                v
-+-----------------------------------------------------------------------------------------------------------------------------------+
-| PHASE 4 & 5: GROW & DEFEND (skills/scale-operations-engine)                                                                       |
-| * 11. Creative Factory: Continuous weekly production loop, Winning Variations (V2-V6)                                             |
-| * 12. Operations & Fulfillment Defense: Private 3PL SLA <= 48h, Net Margin Dashboard, Niche Brand Evolution & Risk Diversify      |
-+---------------------------------------------------------------+-------------------------------------------------------------------+
-                                                                |
-                                                                v
-+-----------------------------------------------------------------------------------------------------------------------------------+
-| PHASE 6: LEARN (skills/scale-operations-engine & skills/ecom-growth-engine)                                                       |
-| * Closed-Loop Feedback Engine: Actual sales, CAC, CVR, and refund data fed back into Phase 1 Discovery to continuously improve AI |
-+-----------------------------------------------------------------------------------------------------------------------------------+
-```
-
----
-
-## 📂 Danh Sách 7 Skills Trong Kho
-
-| Thứ tự chạy | Skill | Đường dẫn | Mục đích cốt lõi |
-| :---: | :--- | :--- | :--- |
-| **1️⃣** | **`pain-point-research`** | [`skills/pain-point-research/`](./skills/pain-point-research/SKILL.md) | Săn tìm ngôn ngữ nỗi đau, phân cụm semantic, bóc tách review 1–3★ tìm *Solution Gap*. |
-| **2️⃣** | **`winning-product-research`** | [`skills/winning-product-research/`](./skills/winning-product-research/SKILL.md) | 20 tiêu chí lọc sản phẩm win, Scorecard 100 điểm, Unit margin $\ge 70\%$, logistics an toàn. |
-| **3️⃣** | **`market-validation`** | [`skills/market-validation/`](./skills/market-validation/SKILL.md) | Ma trận $\text{Product} \times \text{Pain} \times \text{Country}$, *Geographic Arbitrage*, cổng thanh toán bản địa. |
-| **4️⃣** | **`competition-intelligence`** | [`skills/competition-intelligence/`](./skills/competition-intelligence/SKILL.md) | 7 tầng quét đối thủ, Ad longevity, Price map, tìm **Angle Gap** & tạo báo cáo **"WHY NOW?" Go/No-Go**. |
-| **5️⃣** | **`store-conversion-engine`** | [`skills/store-conversion-engine/`](./skills/store-conversion-engine/SKILL.md) | Hệ thống Store chuyển đổi cao (10 tiêu chuẩn DTC), Visual Sales Letter 13 tầng, Offer Ladder. |
-| **6️⃣** | **`ecom-growth-engine`** | [`skills/ecom-growth-engine/`](./skills/ecom-growth-engine/SKILL.md) | Creative Matrix (25–50 concepts), Tracking QA, Paid Testing có kiểm soát, Chẩn đoán phễu (Case A–E). |
-| **7️⃣** | **`scale-operations-engine`** | [`skills/scale-operations-engine/`](./skills/scale-operations-engine/SKILL.md) | Private Agent 3PL, Creative Factory hàng tuần, Niche Brand Evolution, Vòng lặp học tập khép kín. |
+| Danh mục | Skill | Đường dẫn | Mục đích cốt lõi |
+| :--- | :--- | :--- | :--- |
+| 👑 **Orchestrator** | **`dropshipping-orchestrator`** | [`skills/dropshipping-orchestrator/`](./skills/dropshipping-orchestrator/SKILL.md) | **Meta-skill điều phối toàn bộ workflow**: Kiểm soát Stage Lock, Gated Decisions, Backtracking, Confidence Policy. |
+| 🔬 **Stage 01** | **`pain-point-research`** | [`skills/pain-point-research/`](./skills/pain-point-research/SKILL.md) | Săn tìm ngôn ngữ nỗi đau, phân cụm semantic, bóc tách review 1–3★ tìm *Solution Gap*. |
+| 📦 **Stage 02** | **`winning-product-research`** | [`skills/winning-product-research/`](./skills/winning-product-research/SKILL.md) | 20 tiêu chí lọc sản phẩm win, Scorecard 100 điểm, Unit margin $\ge 70\%$, logistics an toàn. |
+| 🌍 **Stage 03** | **`market-validation`** | [`skills/market-validation/`](./skills/market-validation/SKILL.md) | Ma trận $\text{Product} \times \text{Pain} \times \text{Country}$, *Geographic Arbitrage*, cổng thanh toán bản địa. |
+| 🔍 **Stage 04** | **`competition-intelligence`** | [`skills/competition-intelligence/`](./skills/competition-intelligence/SKILL.md) | 7 tầng quét đối thủ, Ad longevity, Price map, tìm **Angle Gap** & tạo báo cáo **"WHY NOW?" Go/No-Go**. |
+| 🏪 **Stage 05** | **`store-conversion-engine`** | [`skills/store-conversion-engine/`](./skills/store-conversion-engine/SKILL.md) | Hệ thống Store chuyển đổi cao (10 tiêu chuẩn DTC), Visual Sales Letter 13 tầng, Offer Ladder. |
+| 🚀 **Stage 06** | **`ecom-growth-engine`** | [`skills/ecom-growth-engine/`](./skills/ecom-growth-engine/SKILL.md) | Creative Matrix (25–50 concepts), Tracking QA, Paid Testing có kiểm soát, Chẩn đoán phễu (Case A–E). |
+| 🛡️ **Stage 07** | **`scale-operations-engine`** | [`skills/scale-operations-engine/`](./skills/scale-operations-engine/SKILL.md) | Private Agent 3PL, Creative Factory hàng tuần, Niche Brand Evolution, Vòng lặp học tập khép kín. |
 
 ---
 
